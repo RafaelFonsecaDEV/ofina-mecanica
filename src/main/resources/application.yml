@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: produtos API
+  datasource:
+    url: jdbc:h2:mem:produtos
+    username: sa
+    password: 12345
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled:
+        path: /h2-console //pode alterar para qualquer nome
