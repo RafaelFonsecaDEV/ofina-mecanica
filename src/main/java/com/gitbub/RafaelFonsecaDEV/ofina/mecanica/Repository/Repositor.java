@@ -11,9 +11,13 @@ import java.util.List;
 
 public class Repositor {
 
+    /**
+ * Repositório para acessar os dados da entidade Orcamento.
+ */
     @Repository
     public interface OrcamentoRepository extends JpaRepository<Orcamento, Long> {
 
+        
         List<Orcamento> findByClienteContainingIgnoreCase(String cliente);
 
         @Query("SELECT o FROM Orcamento o WHERE " +
